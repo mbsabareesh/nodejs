@@ -40,100 +40,100 @@ con.connect(function (err) {
                                 });
                             });
 
-                        //     var alterSql = "ALTER TABLE mbsempdetails add column empcode VARCHAR(10)";
-                        //     con.query(alterSql, function (err, result) {
-                        //         if (err) throw err;
-                        //     console.log("Column 'empcode'  successfully!");
-                        //  });
+                            var alterSql = "ALTER TABLE mbsempdetails add column empcode VARCHAR(10)";
+                            con.query(alterSql, function (err, result) {
+                                if (err) throw err;
+                            console.log("Column 'empcode'  successfully!");
+                         });
    
 
-// var emna = "sabareesh";
-// var ged = "male";
-// var ads = "3/95b,molasi,tiruchengode,namakkal-637210";
-// var pn = "9988776655";
-// var exp = "fresher";
-// var asal = "100000";
-// var emco = "mbs-01";
+var emna = "sabareesh";
+var ged = "male";
+var ads = "3/95b,molasi,tiruchengode,namakkal-637210";
+var pn = "9988776655";
+var exp = "fresher";
+var asal = "100000";
+var emco = "mbs-01";
 
-//             var sql = "select * from mbsempdetails where empcode = '"+emco+"';";
+            var sql = "select * from mbsempdetails where empcode = '"+emco+"';";
 
-//             con.query(sql,function(err,result){
-//                 try {
-//                     if (err) {
-//                         console.log("error check the code : "+ err);
-//                     } else if (result.length>0) {
-//                         console.log("already '"+emco+"' exists");
-//                     }else{
-//                         var sql = "insert into mbsempdetails (empname,gender,address,phonenumber,experience,Asalary)values('"+emna+"','"+ged+"','"+ads+"','"+pn+"','"+exp+"','"+asal+"');";
-//                         con.query(sql,function(err,result){
-//                             if(err)throw(err);
-//                             console.log(result);
-//                         })
-//                     }
+            con.query(sql,function(err,result){
+                try {
+                    if (err) {
+                        console.log("error check the code : "+ err);
+                    } else if (result.length>0) {
+                        console.log("already '"+emco+"' exists");
+                    }else{
+                        var sql = "insert into mbsempdetails (empname,gender,address,phonenumber,experience,Asalary)values('"+emna+"','"+ged+"','"+ads+"','"+pn+"','"+exp+"','"+asal+"');";
+                        con.query(sql,function(err,result){
+                            if(err)throw(err);
+                            console.log(result);
+                        })
+                    }
                     
-//                 } catch (error) {
-//                     console.log(error.message)
-//                 }
-//             })
+                } catch (error) {
+                    console.log(error.message)
+                }
+            })
 
 
 
-// var emna = "raja";
-// var ged = "male";
-// var ads = "8/90b,serumolasi,tiruchengode,namakkal-637210";
-// var pn = "9988776650";
-// var exp = "fresher";
-// var asal = "230000";
-// var emco = "mbs-02";
+var emna = "raja";
+var ged = "male";
+var ads = "8/90b,serumolasi,tiruchengode,namakkal-637210";
+var pn = "9988776650";
+var exp = "fresher";
+var asal = "230000";
+var emco = "mbs-02";
 
-//             var sql = "select * from mbsempdetails where empcode = '"+emco+"';";
+            var sql = "select * from mbsempdetails where empcode = '"+emco+"';";
 
-//             con.query(sql,function(err,result){
-//                 try {
-//                     if (err) {
-//                         console.log("error check the code : "+ err);
-//                     } else if (result.length>0) {
-//                         console.log("already '"+emco+"' exists");
-//                     }else{
-//                         var sql = "insert into mbsempdetails (empname,gender,address,phonenumber,experience,Asalary)values('"+emna+"','"+ged+"','"+ads+"','"+pn+"','"+exp+"','"+asal+"');";
-//                         con.query(sql,function(err,result){
-//                             if(err)throw(err);
-//                             console.log(result);
-//                         })
-//                     }
+            con.query(sql,function(err,result){
+                try {
+                    if (err) {
+                        console.log("error check the code : "+ err);
+                    } else if (result.length>0) {
+                        console.log("already '"+emco+"' exists");
+                    }else{
+                        var sql = "insert into mbsempdetails (empname,gender,address,phonenumber,experience,Asalary)values('"+emna+"','"+ged+"','"+ads+"','"+pn+"','"+exp+"','"+asal+"');";
+                        con.query(sql,function(err,result){
+                            if(err)throw(err);
+                            console.log(result);
+                        })
+                    }
                     
-//                 } catch (error) {
-//                     console.log(error.message)
-//                 }
-//             })
+                } catch (error) {
+                    console.log(error.message)
+                }
+            })
 
-// var emna = "kumar";
-// var ged = "male";
-// var ads = "karumandapalayam,erode-637220";
-// var pn = "8908718100";
-// var exp = "3 year";
-// var asal = "300000";
-// var emco = "mbs-15";
+var emna = "kumar";
+var ged = "male";
+var ads = "karumandapalayam,erode-637220";
+var pn = "8908718100";
+var exp = "3 year";
+var asal = "300000";
+var emco = "mbs-15";
 
-//             var sql = "select * from mbsempdetails where empcode = '"+emco+"';";
-//             con.query(sql,function(err,result){
-//                 try {
-//                     if (err) {
-//                         console.log("error check the code : "+ err);
-//                     } else if (result.length>0) {
-//                         console.log(" error    :   already '"+emco+"' exists");
-//                     }else{
-//                         var sql = "insert into mbsempdetails (empname,gender,address,phonenumber,experience,Asalary,empcode)values('"+emna+"','"+ged+"','"+ads+"','"+pn+"','"+exp+"','"+asal+"','"+emco+"');";
-//                         con.query(sql,function(err,result){
-//                             if(err)throw(err);
-//                             console.log(result);
-//                         })
-//                     }
+            var sql = "select * from mbsempdetails where empcode = '"+emco+"';";
+            con.query(sql,function(err,result){
+                try {
+                    if (err) {
+                        console.log("error check the code : "+ err);
+                    } else if (result.length>0) {
+                        console.log(" error    :   already '"+emco+"' exists");
+                    }else{
+                        var sql = "insert into mbsempdetails (empname,gender,address,phonenumber,experience,Asalary,empcode)values('"+emna+"','"+ged+"','"+ads+"','"+pn+"','"+exp+"','"+asal+"','"+emco+"');";
+                        con.query(sql,function(err,result){
+                            if(err)throw(err);
+                            console.log(result);
+                        })
+                    }
                     
-//                 } catch (error) {
-//                     console.log(error.message)
-//                 }
-//             })
+                } catch (error) {
+                    console.log(error.message)
+                }
+            })
 
 
                   /* empwork */
@@ -153,51 +153,51 @@ con.connect(function (err) {
                                 });
                             });
 
-// var rol = "frontend developer";
-// var emc = "mbs-01";
+var rol = "frontend developer";
+var emc = "mbs-01";
 
 
-//      var sql = "select * from empwork where empcode = '"+emc+"';";
-//      con.query(sql,function(err,result){
-//         try {
-//             if (err) {
-//                 console.log("check the code"+ err );
-//             } else if (result.length>0){
-//                 console.log("already '"+emc+"' exists ")
-//             } else {
-//                 var sql = "insert into empwork (role,empcode) values ('"+rol+"','"+emc+"');";
-//                 con.query(sql,function(err,result){
-//                     if (err) throw(err);
-//                     console.log(result);
-//                 })
-//             }
-//         } catch (error) {
+     var sql = "select * from empwork where empcode = '"+emc+"';";
+     con.query(sql,function(err,result){
+        try {
+            if (err) {
+                console.log("check the code"+ err );
+            } else if (result.length>0){
+                console.log("already '"+emc+"' exists ")
+            } else {
+                var sql = "insert into empwork (role,empcode) values ('"+rol+"','"+emc+"');";
+                con.query(sql,function(err,result){
+                    if (err) throw(err);
+                    console.log(result);
+                })
+            }
+        } catch (error) {
             
-//         }
-//      })
+        }
+     })
 
-// var rol = "full stack developer";
-// var emc = "mbs-15";
+var rol = "full stack developer";
+var emc = "mbs-15";
 
 
-//      var sql = "select * from empwork where empcode = '"+emc+"';";
-//      con.query(sql,function(err,result){
-//         try {
-//             if (err) {
-//                 console.log("check the code"+ err );
-//             } else if (result.length>0){
-//                 console.log("already '"+emc+"' exists ")
-//             } else {
-//                 var sql = "insert into empwork (role,empcode) values ('"+rol+"','"+emc+"');";
-//                 con.query(sql,function(err,result){
-//                     if (err) throw(err);
-//                     console.log(result);
-//                 })
-//             }
-//         } catch (error) {
+     var sql = "select * from empwork where empcode = '"+emc+"';";
+     con.query(sql,function(err,result){
+        try {
+            if (err) {
+                console.log("check the code"+ err );
+            } else if (result.length>0){
+                console.log("already '"+emc+"' exists ")
+            } else {
+                var sql = "insert into empwork (role,empcode) values ('"+rol+"','"+emc+"');";
+                con.query(sql,function(err,result){
+                    if (err) throw(err);
+                    console.log(result);
+                })
+            }
+        } catch (error) {
             
-//         }
-//      })
+        }
+     })
    
 
 
@@ -219,29 +219,29 @@ con.connect(function (err) {
                 });
             });
 
-// var dj = "2025-01-04";
-// var sh = "morning";
-// var emc = "mbs-15";
+var dj = "2025-01-04";
+var sh = "morning";
+var emc = "mbs-15";
 
-//          var sql = "select * from empjoin where empcode = '"+emc+"';";
-//          con.query(sql,function(err,result){
-//             try {
-//                 if (err) {
-//                     console.log("error check the code "+ err);
-//                 } else if (result.length>0) {
-//                     console.log("already '"+emc+"' exists");
-//                 }else{
-//                     var sql = "insert into empjoin (dateofjoin,shift,empcode)values('"+dj+"','"+sh+"','"+emc+"');";
-//                     con.query(sql,function(err,result){
-//                         if(err)throw err;
-//                         console.log(result);
-//                     })
-//                 }
+         var sql = "select * from empjoin where empcode = '"+emc+"';";
+         con.query(sql,function(err,result){
+            try {
+                if (err) {
+                    console.log("error check the code "+ err);
+                } else if (result.length>0) {
+                    console.log("already '"+emc+"' exists");
+                }else{
+                    var sql = "insert into empjoin (dateofjoin,shift,empcode)values('"+dj+"','"+sh+"','"+emc+"');";
+                    con.query(sql,function(err,result){
+                        if(err)throw err;
+                        console.log(result);
+                    })
+                }
                 
-//             } catch (error) {
-//                 console.log(error.message);
-//             }
-//          })
+            } catch (error) {
+                console.log(error.message);
+            }
+         })
 
 
 
@@ -391,61 +391,61 @@ try {
                                 console.log("Table created!");
                             });
                         });
-//    var bo = "2yaer";
-//    var sb = "2024-01-04";
-//    var eb = "2026-01-04";
-//    var em = "mbs-01";
+   var bo = "2yaer";
+   var sb = "2024-01-04";
+   var eb = "2026-01-04";
+   var em = "mbs-01";
 
-//      var sql = "select * from bond where empcode = '"+em+"';";
-//      con.query(sql,function(err,result){
-//         try {
-//             if (err) {
-//                 console.log("error : "+err);
-//             } else if  (result.length>0){
-//                 console.log("already '"+em+"' exsits")
-//             }else{
-//                 var sql = "insert into bond(bond,startofbond,endofbond,empcode) values ('"+bo+"','"+sb+"','"+eb+"','"+em+"');";
-//                 con.query(sql,function(err,result){
-//                     if(err){
-//                         console.log(err);
-//                     }else{
-//                         console.log(result);
-//                     }
-//                 });
-//             }
+     var sql = "select * from bond where empcode = '"+em+"';";
+     con.query(sql,function(err,result){
+        try {
+            if (err) {
+                console.log("error : "+err);
+            } else if  (result.length>0){
+                console.log("already '"+em+"' exsits")
+            }else{
+                var sql = "insert into bond(bond,startofbond,endofbond,empcode) values ('"+bo+"','"+sb+"','"+eb+"','"+em+"');";
+                con.query(sql,function(err,result){
+                    if(err){
+                        console.log(err);
+                    }else{
+                        console.log(result);
+                    }
+                });
+            }
             
-//         } catch (error) {
-//             console.log(error.message);
-//         }
-//      })
+        } catch (error) {
+            console.log(error.message);
+        }
+     })
 
-// var bo = "3year";
-// var sb = "2025-01-04";
-// var eb = "2028-01-04";
-// var em = "mbs-15";
+var bo = "3year";
+var sb = "2025-01-04";
+var eb = "2028-01-04";
+var em = "mbs-15";
 
-//   var sql = "select * from bond where empcode = '"+em+"';";
-//   con.query(sql,function(err,result){
-//      try {
-//          if (err) {
-//              console.log("error : "+err);
-//          } else if  (result.length>0){
-//              console.log("already '"+em+"' exsits")
-//          }else{
-//              var sql = "insert into bond(bond,startofbond,endofbond,empcode) values ('"+bo+"','"+sb+"','"+eb+"','"+em+"');";
-//              con.query(sql,function(err,result){
-//                  if(err){
-//                      console.log(err);
-//                  }else{
-//                      console.log(result);
-//                  }
-//              });
-//          }
+  var sql = "select * from bond where empcode = '"+em+"';";
+  con.query(sql,function(err,result){
+     try {
+         if (err) {
+             console.log("error : "+err);
+         } else if  (result.length>0){
+             console.log("already '"+em+"' exsits")
+         }else{
+             var sql = "insert into bond(bond,startofbond,endofbond,empcode) values ('"+bo+"','"+sb+"','"+eb+"','"+em+"');";
+             con.query(sql,function(err,result){
+                 if(err){
+                     console.log(err);
+                 }else{
+                     console.log(result);
+                 }
+             });
+         }
          
-//      } catch (error) {
-//          console.log(error.message);
-//      }
-//   })
+     } catch (error) {
+         console.log(error.message);
+     }
+  })
 
 
 var sob = "select tab3.* , bond.bond,bond.startofbond,bond.endofbond from(select tab2.*,empjoin.dateofjoin,empjoin.shift from (select tab1.*,empwork.role from (select * from mbsempdetails)as tab1 join empwork on tab1.empcode = empwork.empcode) as tab2 join empjoin on tab2.empcode = empjoin.empcode)as tab3 join bond on tab3.empcode = bond.empcode ";
