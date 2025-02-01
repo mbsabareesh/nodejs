@@ -359,7 +359,7 @@ var sql = ("select tab4.*,bond from(select tab3.*,shift,dateofjoin from (select 
 
                                     });  
 
-      // common table exception 
+      //common table exception 
       
       
 
@@ -582,5 +582,103 @@ var d = ("select tab5.*,role from(select tab4.*,dateofjoin,shift from (select ta
                });
                
 
+/* emp personal */
 
-               
+
+ 
+ 
+ con.query("USE empdetails", function (err, result) {
+         if (err) throw err;
+
+                var sql = `CREATE TABLE IF NOT EXISTS emppersonal (
+                    empid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                    fathername varchar(100),
+                    mothername varchar(100),
+                    marriageorunmarriage varchar(10),
+                    wifename varchar(10),
+                    home_number bigint,
+                    empcode varchar(10) 
+                )`;
+
+                con.query(sql,function(err,result){
+                    try {
+                        if (err) {
+                            console.log("error code"+err.message);
+                        } else {
+                            console.log("table created sucessfully");
+                        }
+                    } catch (error) {
+                        console.log(error);
+                    }
+                });
+
+    });
+
+    var fn = "raj";
+    var mn = "aishu";
+    var mum = "marriage";
+    var wn ="harishini";
+    var home_number ="9095098302";
+    var emc = "mbs-15";
+    
+                var sql =("select * from emppersonal where empcode = '"+emc+"';");
+                  con.query(sql,function(err,result){
+                    try {
+                        if (err) {
+                            console.log(err.message);
+                        } else if (result.length>0) {
+                            console.log("already '"+emc+"' exists");
+                        } else{
+                            var sql=("insert into emppersonal (fathername,mothername,marriageorunmarriage,wifename,home_number,empcode) values('"+fn+"','"+mn+"','"+mum+"','"+wn+"','"+home_number+"','"+emc+"');");
+                             con.query(sql,function(err,result){
+                                try {
+                                    if (err) {
+                                        console.log(err);
+                                    } else {
+                                        console.log(result);
+                                    }
+                                    
+                                } catch (error) {
+                                    console.log(error);
+                                }
+                             })
+                        }
+                        
+                    } catch (error) {
+                        console.log(error.message);
+                    }
+                  });
+    
+
+/* queries */
+
+
+          var sql=("select tab1.*,fathername,mothername,wifename from(select * from mbsempdetails) as tab1 join emppersonal on tab1.empcode = emppersonal.empcode; ");
+          con.query(sql,function(err,result){
+             try {
+                if (err) {
+                    console.log(err.message);
+                } else {
+                    console.log(result);
+                }
+             } catch (error) {
+                console.log(error);
+             }
+          });
+
+
+
+
+          var sql=("select tab6.*, empwork.role from(select tab5.*,dateofjoin,shift from (select tab4.*,bond,bond.startofbond,bond.endofbond from(select tab3.*,laptop,laptopcompany,bag,mouse,keyboard from(select tab2.*,companyname,role,year from (select tab1.*,fathername,mothername,wifename from(select * from mbsempdetails) as tab1 join emppersonal on tab1.empcode = emppersonal.empcode) as tab2 join  experiencedetails on tab2.empcode =  experiencedetails.empcode) as tab3 join companypro on tab3.empcode= companypro.empcode)as tab4 join bond on tab4.empcode = bond.empcode)as tab5 join empjoin on tab5.empcode = empjoin.empcode)as tab6 join empwork on tab6.empcode = empwork.empcode;");
+          con.query(sql,function(err,result){
+             try {
+                if (err) {
+                    console.log(err.message);
+                } else {
+                    console.log(result);
+                }
+             } catch (error) {
+                console.log(error);
+             }
+          });
+              
